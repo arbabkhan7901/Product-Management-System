@@ -1,0 +1,18 @@
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.BAL\bin\Debug\PMS.BAL.dll
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.BAL\bin\Debug\PMS.BAL.pdb
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.BAL\bin\Debug\PMS.DAL.dll
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.BAL\bin\Debug\PMS.Entities.dll
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.BAL\bin\Debug\PMS.DAL.pdb
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.BAL\bin\Debug\PMS.Entities.pdb
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.BAL\obj\Debug\PMS.BAL.csprojResolveAssemblyReference.cache
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.BAL\obj\Debug\PMS.BAL.dll
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.BAL\obj\Debug\PMS.BAL.pdb
+H:\6th semester\EAD\Assignment\Assignment 7 Sol\DBPractice\PMS.BAL\bin\Debug\PMS.BAL.dll
+H:\6th semester\EAD\Assignment\Assignment 7 Sol\DBPractice\PMS.BAL\bin\Debug\PMS.BAL.pdb
+H:\6th semester\EAD\Assignment\Assignment 7 Sol\DBPractice\PMS.BAL\bin\Debug\PMS.DAL.dll
+H:\6th semester\EAD\Assignment\Assignment 7 Sol\DBPractice\PMS.BAL\bin\Debug\PMS.Entities.dll
+H:\6th semester\EAD\Assignment\Assignment 7 Sol\DBPractice\PMS.BAL\bin\Debug\PMS.DAL.pdb
+H:\6th semester\EAD\Assignment\Assignment 7 Sol\DBPractice\PMS.BAL\bin\Debug\PMS.Entities.pdb
+H:\6th semester\EAD\Assignment\Assignment 7 Sol\DBPractice\PMS.BAL\obj\Debug\PMS.BAL.csprojResolveAssemblyReference.cache
+H:\6th semester\EAD\Assignment\Assignment 7 Sol\DBPractice\PMS.BAL\obj\Debug\PMS.BAL.dll
+H:\6th semester\EAD\Assignment\Assignment 7 Sol\DBPractice\PMS.BAL\obj\Debug\PMS.BAL.pdb

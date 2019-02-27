@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "changePwd";
+    Layout = "~/Views/Shared/_MyPublicLayout.cshtml";
+}
+
+<html>
+<head>
+
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .div1 {
+            background-color: white;
+            padding: 10px;
+            margin-left: 400px;
+            margin-top: 80px;
+            border: 50px black;
+            border-radius: 5px;
+            height: 300px;
+            width: 400px;
+            text-align: left;
+        }
+
+        .pos {
+           
+            background-color: lightblue;
+            font-size: 14px;
+            height: 40px;
+            width: 80px;
+        }
+         body {
+                background-image:url("/UploadedFiles/3.jpg");
+                background-repeat: no-repeat;
+                background-size: 1500px 1000px;
+               
+            }
+    </style>
+</head>
+<body>
+
+    <div class="div1">
+
+        <form action="~/User/SavePwd" method="post">
+            <table cellspacing="1" cellpadding="1">
+                <tr>
+                    <td><h2 style="font-family:'Comic Sans MS'">Enter New Password:</h2></td>
+                    <td><input type="password" name="newPwd" id="newPwd" required/></td>
+                 </tr>
+                <tr>
+                    <td><h2 style="font-family:'Comic Sans MS'">Confirm Password:</h2></td>
+                    <td><input type="password" name="newPwd1" id="newPwd1" required/></td>
+                </tr>
+                <tr>
+                    <td><input class="pos" type="submit" id="btn1" value="Save"></td>
+                    <td><input class="pos" type="reset" id="btn2" value="Cancel" onclick="@("window.location.href='" + @Url.Action("NormalUser", "Home") + "'")";/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+

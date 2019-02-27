@@ -1,0 +1,12 @@
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\bin\Debug\DBPractice.exe.config
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\bin\Debug\DBPractice.exe
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\bin\Debug\DBPractice.pdb
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\bin\Debug\PMS.BAL.dll
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\bin\Debug\PMS.Entities.dll
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\bin\Debug\PMS.DAL.dll
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\bin\Debug\PMS.BAL.pdb
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\bin\Debug\PMS.Entities.pdb
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\bin\Debug\PMS.DAL.pdb
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\obj\Debug\DBPractice.csprojResolveAssemblyReference.cache
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\obj\Debug\DBPractice.exe
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\DBPractice\obj\Debug\DBPractice.pdb

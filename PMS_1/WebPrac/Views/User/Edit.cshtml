@@ -1,0 +1,97 @@
+﻿@if (Session["user"] != null)
+{
+    @model PMS.Entities.UserDTO
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_MyPublicLayout.cshtml";
+
+
+    <html>
+    <head>
+
+        <style>
+            body {
+                background-image:url("/UploadedFiles/1.jpg");
+                background-repeat: no-repeat;
+                background-size: 1500px 1000px;
+               
+            }
+
+            .div1 {
+                background-color: white;
+                padding: 10px;
+               border:1px solid black;
+                margin-left: 400px;
+                margin-top: 80px;
+                border: 50px black;
+                border-radius: 5px;
+                height: 300px;
+                width: 450px;
+                text-align: left;
+            }
+
+            .pos {
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                background-color: rebeccapurple;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 280px;
+                cursor: pointer;
+                height: 40px;
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1 style="color:black;font-family:Verdana; text-align: center; font-family:'Comic Sans MS'";>***Edit Profile***</h1>
+
+        <div class="div1">
+            <span style="color:red">@TempData["update"]</span>
+            <form action="~/User/Save" method="post" enctype="multipart/form-data">
+                <table cellspacing="4" cellpadding="2">
+
+                    <img src="~/UploadedFiles/@Model.PictureName" style="width:100px;height:100px; margin:7px 280px" />
+
+                    @{
+                        Session["image"] = Model.PictureName;
+                        Session["edit"] = true;
+                    }
+                    <tr>
+                        <td> Name:</td>
+                        <td><input id="name" name="Name" type="text" value="@Model.Name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Login:</td>
+                        <td><input id="login" type="text" name="login" value="@Model.Login" disabled></td>
+                    </tr>
+                    <tr>
+                        <td> Password:</td>
+                        <td><input id="password" type="password" name="password" disabled></td>
+                    </tr>
+                    <tr>
+                        <td> Email:</td>
+                        <td><input id="email" type="email" name="email" value="@Model.Email" required></td>
+                    </tr>
+                    <tr>
+                        <td> Upload:</td>
+                        <td><input type="file" id="image" name="image" value="~/uploadedFiles/@Model.PictureName" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" id="btn1" value="Save"></td>
+                        <td><input type="reset" id="btn2" value="Cancel" onclick="@("window.location.href='" + @Url.Action("NormalUser", "Home") + "'")" ; /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
+                        }
+                        else
+                        {
+                            <span style="color:red">Please login first</span>
+                        }
+
