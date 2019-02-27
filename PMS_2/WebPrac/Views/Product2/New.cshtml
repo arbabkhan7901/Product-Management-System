@@ -1,0 +1,152 @@
+﻿@if (Session["user"] != null){
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_MyProductLayout.cshtml";
+    TempData["edit"] = false;
+
+    <style>
+            body {
+                background-image:url("/UploadedFiles/4.jpg");
+                background-repeat: no-repeat;
+                background-size: 1400px 1500px;
+               
+            }
+
+    </style>
+
+    @section scripts {
+
+        <script src="~/Scripts/handlebars.js"></script>
+        <script src="~/Scripts/myapp.js"></script>
+
+        <style>
+            .button {
+                height: 30px;
+                width: 60px;
+                background-color: gray;
+            }
+        </style>
+
+        <script>
+
+        $(function () {
+            MyApp.Main();
+        });
+        </script>
+    }
+
+    <body>
+        <h2 style="text-align:center">Product Management System</h2>
+
+        <div>
+            <form>
+                <table>
+                    <tr>
+                        <td><img src="" style="width:100px;height:100px;display:none" id="prodimg" /></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="hidden" name="ProductID" id="txtProductID" value="0" />
+                            <input type="hidden" name="PictureName" id="txtPictureName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="Name" id="txtName" required /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Price:</td>
+                        <td><input type="text" name="Price" id="txtPrice" required /></td>
+                    </tr>
+                    <tr>
+                        <td>Image:</td>
+                        <td><input type="file" name="Image" id="myfile" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" class="button" value="Save" id="btnSave" />
+                            <input type="button" class="button" id="btnClear" value="Clear" />
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+
+        </div>
+        <hr />
+        <h2>Products</h2>
+
+
+
+        <script id="listtemplate" type="text/x-handlebars-template">
+            {{#each data}}
+            <div class="prodbox"  pid="{{ProductID}}">
+                <div style="float:left">
+                    <img src="/UploadedFiles/{{PictureName}}" style="width:100px;height:100px;" />
+                </div>
+                <div style="float:left; background-color:wheat">
+                    Product Id: {{ProductID}} <br />
+                    Name: {{Name}} <br />
+                    Price: {{Price}} <br />
+                    Created On {{CreatedOn}} <b>By</b> {{userName}}
+                </div>
+                <div style="clear:both">
+                    @if (WebPrac.Security.SessionManager.User.IsAdmin)
+                    {
+                        <a href="/Product/Edit/{{ProductID}}">Edit</a>
+                        <a href="/Product/Delete/{{ProductID}}">Delete</a>
+                        <input type="submit" value="Edit" class="editbutton" pid="{{ProductID}}" />
+                    }
+                </div>
+                <div class="commentarea">
+                    <textarea class="txtComment" rows="1" cols="50"></textarea>
+                    <button id="txtComment" value="Add" class="addcomment">Add</button>
+                </div>
+                <br />
+                <div class="comments">
+
+                    {{#each Comments}}
+                    <div class="comment">
+                        <div class="picture">
+                            <b style="font-size:14px">Comments:</b>
+                            <img src='/UploadedFiles/{{PictureName}}' style="width:100px;height:100px; margin:7px 280px" />
+                        </div>
+                        <div>
+
+                            <a href="/Home/Profile" target="_blank" class="name">{{UserName}}</a>
+                            <span class="comment-text"> {{CommentText}}</span> <br />
+                            <span class="comment-text commenton">{{CommentOn}}</span>
+
+                        </div>
+                    </div>
+                    <br />
+                    <div style="clear:both"></div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/each}}
+        </script>
+        <script id="commenttemplate" type="text/x-handlebars-template">
+            <div class="comment">
+                <div class="picture">
+                    <img src='/UploadedFiles/{{PictureName}}' style="width:100px;height:100px; margin:7px 280px" />
+                </div>
+                <div>
+
+                    <a href="/Home/Profile" target="_blank" class="name">{{UserName}}</a>
+                    <span class="comment-text"> {{CommentText}}</span> <br />
+                    <span class="comment-text commenton">{{CommentOn}}</span>
+
+                </div>
+            </div>
+            <br />
+            <div style="clear:both"></div>
+        </script>
+    </body>
+}
+else
+{
+    <span style="color:red">Please login First</span>
+}
+

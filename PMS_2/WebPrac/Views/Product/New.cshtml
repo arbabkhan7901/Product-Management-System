@@ -1,0 +1,66 @@
+﻿@{
+    if (Session["user"] != null)
+    {
+        @model PMS.Entities.ProductDTO
+
+
+        ViewBag.Title = "New";
+        if (Model.ProductID > 0)
+        {
+            TempData["edit"] = true;
+        }
+        else
+        {
+            TempData["edit"] = false;
+        }
+
+        Layout = "~/Views/Shared/_MyProductLayout.cshtml";
+
+
+        <h2 style="text-align:center; font-family:'Comic Sans MS'">Add New Product</h2>
+        <span style="color:red">@TempData["Msg"]</span>
+        <body style="background-color:lightgray">
+            <form action='@Url.Content("~/Product/Save")' method="post" enctype="multipart/form-data">
+                <table>
+
+                    @if (Model.PictureName != "")
+                    {
+                        <tr>
+                            <td>
+                                <img src='@Url.Content("~/UploadedFiles")/@Model.PictureName' style="width:100px;height:100px;" />
+                            </td>
+                        </tr>
+                    }
+                    <tr>
+                        <td>
+                            <input type="hidden" name="ProductID" value="@Model.ProductID" />
+                            <input type="hidden" name="PictureName" value="@Model.PictureName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="Name" value="@Model.Name" required /></td>
+                    </tr>
+                    <tr>
+                        <td>Price:</td>
+                        <td><input type="number" name="Price" value="@Model.Price" required /></td>
+                    </tr>
+                    <tr>
+                        <td>Image:</td>
+                        <td><input type="file" name="Image" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" class="button" value="Save" /></td>
+                    </tr>
+                </table>
+
+            </form>
+        </body>
+
+    }
+    else
+    {
+        <span style="color:red">Please login First</span>
+    }
+}
+

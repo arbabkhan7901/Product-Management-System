@@ -1,0 +1,56 @@
+﻿@{
+    if (Session["user"] != null)
+    {
+        @model  PMS.Entities.UserDTO
+
+        ViewBag.Title = "Profile";
+        Layout = "~/Views/Shared/_MyPublicLayout.cshtml";
+
+
+
+        <html>
+        <head>
+            <style>
+                .div1 {
+                    background-color: white;
+                    padding: 10px;
+                    margin: 150px 450px;
+                    border: 50px black;
+                    border-radius: 5px;
+                    height: 320px;
+                    width: 380px;
+                    text-align: left;
+                }
+
+                body {
+                    background-image: url("/UploadedFiles/8.jpg");
+                    background-repeat: no-repeat;
+                    background-size: 1350px 680px;
+                }
+
+                .button {
+                    height: 40px;
+                    width: 80px;
+                    background-color: lightgray;
+                }
+            </style>
+        </head>
+        <body>
+
+            <div class="div1">
+                <h1 style="font-family:'Comic Sans MS'">***User Profile***</h1>
+
+                User Name: @Model.Login<br />
+                Email: @Model.Email
+                <img src="~/UploadedFiles/@Model.PictureName" style="width:100px;height:100px; margin:4px 280px" /><br /><br />
+                <input type="submit" class="button" name="back" value="Back" onclick="@("window.location.href='" + @Url.Action("ShowAll", "Product") + "'");" />
+            </div>
+        </body>
+    </html>
+    }
+    else
+    {
+        <span style="color">Please login First</span>
+    }
+}
+

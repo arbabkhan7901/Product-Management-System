@@ -1,0 +1,4 @@
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.Entities\bin\Debug\PMS.Entities.dll
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.Entities\bin\Debug\PMS.Entities.pdb
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.Entities\obj\Debug\PMS.Entities.dll
+C:\Users\arbab_000.HAIER-PC\Documents\master\DBPractice\PMS.Entities\obj\Debug\PMS.Entities.pdb

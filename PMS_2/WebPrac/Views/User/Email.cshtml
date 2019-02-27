@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Email";
+    Layout = "~/Views/Shared/_MyPublicLayout.cshtml";
+}
+
+
+        <style>
+            
+           .div1 {
+        background-color: white;
+        padding: 10px;
+        margin: 150px 450px;
+        border: 50px black;
+        border-radius: 5px;
+        height: 200px;
+        width: 250px;
+        text-align: left;
+    }
+
+            .button {
+                height: 40px;
+                width: 80px;
+                background-color: lightblue;
+            }
+             body {
+                background-image:url("/UploadedFiles/7.jpg");
+                background-repeat: no-repeat;
+                background-size: 1500px 1000px;
+
+            }
+        </style>
+<body>
+    <div class="div1">
+        <h1 style="font-family:'Comic Sans MS'">Enter Code:</h1>
+        <form action="~/User/UpdatePassword" method="get">
+            <input type="text" name="code" id="code" required/><br /><br />
+            <input class="button" type="submit" name="btn" id="btn" value="Confirm" />
+        </form>
+
+    </div>
+
+</body>
+        
